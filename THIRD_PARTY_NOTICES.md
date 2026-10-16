@@ -1,6 +1,6 @@
 # Third-party notices
 
-COMPASS is a modified derivative of T2M-GPT (https://github.com/Mael-zys/T2M-GPT), originally copyright 2023 Tencent and distributed under Apache 2.0. This snapshot adds attribution-based relation training, dataset adapters, evaluation and analysis tools, tests, and manuscript sources. Original license and copyright notices are retained in LICENSE.
+COMPASS is a modified derivative of T2M-GPT (https://github.com/Mael-zys/T2M-GPT), originally copyright 2023 Tencent and distributed under Apache 2.0. This snapshot adds attribution-based relation training, dataset adapters, evaluation and analysis tools, and tests. Original license and copyright notices are retained in LICENSE.
 
 `clip_local/` contains code derived from OpenAI CLIP (https://github.com/openai/CLIP). Its MIT license is reproduced in `clip_local/LICENSE`.
 
