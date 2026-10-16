@@ -1,0 +1,315 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+.vscode
+dataset/dataset_TM_train_cb1_temp.py
+train_gpt_cnn_temp.py
+train_gpt_cnn_mask.py
+start.sh
+start_eval.sh
+config.json
+output_GPT_Final
+output_vqfinal
+output_transformer
+glove
+checkpoints
+dataset/HumanML3D
+dataset/KIT-ML
+output
+matrix_multi.py
+body_models
+render_final_diffuse.py
+render_final_mdm.py
+pretrained
+MDM
+Motiondiffusion
+Visualize_temp.py
+new.sh
+T2M_render
+render_final_t2m.py
+
+# Local agent state and environments
+.agents/
+.codex/
+.memory/
+.venv*/
+
+# Secrets and machine-local configuration
+.env*
+!.env.example
+*.pem
+*.key
+*.token
+.netrc
+git.txt
+
+# Local assistant state, toolchains, and scratch work
+.claude/
+.tmp*/
+.tools/
+Stable-Text-to-Motion-Framework-official/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+missfont.log
+
+# External repositories and local reference copies
+LaMP/
+MotionGPT/
+SATO/
+motion-diffusion-model/
+dataset/HumanML3D_old/
+
+# Datasets, generated tokens, checkpoints, and training outputs
+dataset/KIT-ML/
+dataset/HumanML3D/
+dataset/Motion-X/
+dataset/Motion-X-322/
+output*/
+save/
+wandb/
+**/wandb/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+*.npy
+*.npz
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+
+# Runtime artifacts
+events.out.tfevents.*
+*.pid
+*.pid.txt
+pid.txt
+nohup.out
+*.tmp
+*.progress.jsonl
+
+# Large experiment result directories. Keep reusable top-level ablation code.
+ablation/*/
+!ablation/kit_t2mgpt_sato/
+ablation/kit_t2mgpt_sato/*
+!ablation/kit_t2mgpt_sato/README.md
+!ablation/motionx_t2mgpt_sato/
+ablation/motionx_t2mgpt_sato/*
+!ablation/motionx_t2mgpt_sato/README.md
+
+# Generated local assets and reference downloads
+img/generated/
+2405.01461v3.pdf
+backup.txt
+
+# Public release: keep data-generation and integration source only
+.aws/
+.cursor/
+.ruff_cache/
+dataset/Motion-X-322-MaxToken75/
+paper_tip/layout_check/
+paper_tip/build_before_figures/
+paper_tip/main.pdf
+paper_tip/main.txt
+!/dataset/HumanML3D/
+/dataset/HumanML3D/**
+!/dataset/
+!/dataset/HumanML3D/
+!/dataset/HumanML3D/build_debug_pairs_llm.py
+!/dataset/
+!/dataset/HumanML3D/
+!/dataset/HumanML3D/build_full_pairs.py
+!/dataset/
+!/dataset/HumanML3D/
+!/dataset/HumanML3D/build_pairs_rulebased.py
+!/dataset/
+!/dataset/HumanML3D/
+!/dataset/HumanML3D/build_preserving_pairs.py
+!/dataset/
+!/dataset/HumanML3D/
+!/dataset/HumanML3D/build_test_perb.py
+!/dataset/
+!/dataset/HumanML3D/
+!/dataset/HumanML3D/build_test_perb_supplement.py
+!/dataset/
+!/dataset/HumanML3D/
+!/dataset/HumanML3D/build_train_alter_supplement.py
+!/dataset/
+!/dataset/HumanML3D/
+!/dataset/HumanML3D/build_train_alter_v2.py
+!/dataset/
+!/dataset/HumanML3D/
+!/dataset/HumanML3D/build_train_perb_supplement.py
+!/dataset/
+!/dataset/HumanML3D/
+!/dataset/HumanML3D/dataset_sato_pp.py
+!/dataset/
+!/dataset/HumanML3D/
+!/dataset/HumanML3D/merge_alter_to_txt.py
+!/dataset/
+!/dataset/HumanML3D/
+!/dataset/HumanML3D/run_alter_v2.sh
+!/dataset/KIT-ML/
+/dataset/KIT-ML/**
+!/dataset/
+!/dataset/KIT-ML/
+!/dataset/KIT-ML/build_test_perb.py
+!/dataset/
+!/dataset/KIT-ML/
+!/dataset/KIT-ML/build_test_perb_missing_list.py
+!/dataset/
+!/dataset/KIT-ML/
+!/dataset/KIT-ML/build_test_perb_supplement.py
+!/dataset/
+!/dataset/KIT-ML/
+!/dataset/KIT-ML/finalize_test_perb_levels.py
+!/dataset/Motion-X-322/
+/dataset/Motion-X-322/**
+!/dataset/
+!/dataset/Motion-X-322/
+!/dataset/Motion-X-322/build_test_perb.py
+!/MotionGPT/
+/MotionGPT/**
+!/MotionGPT/
+!/MotionGPT/eval_loader_robustness.py
+!/MotionGPT/
+!/MotionGPT/scripts/
+!/MotionGPT/scripts/run_humanml3d_loader_eval_shard.sh
+
+# Separately obtained rendering assets
+visualize/joints2smpl/smpl_models/

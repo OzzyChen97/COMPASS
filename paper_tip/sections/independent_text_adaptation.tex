@@ -1,0 +1,15 @@
+The per-level tests evaluate each rewrite type on all 4,380 HumanML3D or
+7,679 Motion-X motions (Tables~\ref{tab:humanml_independent_cfg}
+and~\ref{tab:motionx_independent_cfg}). They use the same adapted checkpoints,
+CFG, and evaluator as the mixed-table retrieval columns. Each level has its
+own prompt and candidate population, so a mixed-test score is not the macro
+average of the level-specific scores.
+
+COMPASS variants have higher retrieval point estimates than their respective
+parents at every rank and rewrite level. On HumanML3D, mean P1/P2/P3 R@3
+increases from 60.99\% to 72.88\% for the T2M-GPT family and from 60.06\%
+to 62.03\% for the MotionGPT family. The corresponding Motion-X changes are
+68.19\% to 69.04\% and 44.22\% to 45.91\%. The gains span all three
+rewrite types, with larger margins for the HumanML3D T2M-GPT family. They
+characterize these adapted checkpoints and do not isolate individual losses
+or variability across training and generation seeds.

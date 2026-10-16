@@ -1,0 +1,13 @@
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l*{8}{c}@{}}
+\toprule
+Method & \multicolumn{3}{c}{Source encoder} & \multicolumn{5}{c}{Adapted encoder} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-9}
+ & FID $\downarrow$ & FID$_P$ $\downarrow$ & FID$_D$ $\downarrow$ & Matching$_P$ $\downarrow$ & R@1$_P$ $\uparrow$ & R@2$_P$ $\uparrow$ & R@3$_P$ $\uparrow$ & Div.$_O$ \\
+\midrule
+T2M-GPT & 0.203 & 1.279 & 0.813 & 5.182 & 40.40 & 57.88 & 67.79 & 14.232 \\
+T2M-GPT+COMPASS & \textbf{0.166} & \textbf{0.804} & \textbf{0.586} & \textbf{5.110} & \textbf{41.00} & \textbf{58.79} & \textbf{68.75} & \textbf{14.398} \\
+\midrule
+MotionGPT & \textbf{2.618} & 3.750 & 0.596 & 7.553 & 21.60 & 34.80 & 44.23 & \textbf{13.134} \\
+MotionGPT+COMPASS & 2.775 & \textbf{3.338} & \textbf{0.109} & \textbf{7.324} & \textbf{22.68} & \textbf{36.06} & \textbf{45.73} & 13.053 \\
+\bottomrule
+\end{tabular*}

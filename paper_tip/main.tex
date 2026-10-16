@@ -1,0 +1,111 @@
+\documentclass[journal]{IEEEtran}
+
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[hyphens]{url}
+% All experiments, controls and tables are part of the main article.
+
+% Fall back to the bundled Computer Modern typewriter face when the optional
+% Courier metrics are unavailable in a minimal TeX installation.
+\renewcommand{\ttdefault}{cmtt}
+
+% IEEEtran uses 8 pt (\footnotesize) text for journal tables. Keep all result
+% tables on the same typography and spacing settings without geometric scaling.
+\newcommand{\resulttablesetup}{%
+  \footnotesize
+  \setlength{\tabcolsep}{2pt}%
+  \renewcommand{\arraystretch}{1.15}%
+}
+
+% Compact float placement without changing IEEE body typography or margins.
+\setcounter{topnumber}{3}
+\setcounter{dbltopnumber}{3}
+\setcounter{totalnumber}{5}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.75}
+\renewcommand{\dblfloatpagefraction}{0.75}
+\setlength{\floatsep}{10pt plus 2pt minus 2pt}
+\setlength{\dblfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{12pt plus 2pt minus 2pt}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{12pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\setlength{\@dblfptop}{0pt}
+\setlength{\@dblfpsep}{12pt}
+\setlength{\@dblfpbot}{0pt plus 1fil}
+\makeatother
+
+\hyphenation{text-to-motion auto-regressive MotionGPT}
+
+\title{COMPASS: Relation-Conditioned Prompt Robustness for Text-to-Motion Generation}
+
+\author{Anonymous Authors}
+
+\markboth{IEEE Transactions on Multimedia,~Vol.~XX, No.~XX, 2026}%
+{Anonymous Authors: COMPASS}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Text-to-motion generators should tolerate meaning-preserving prompt rewrites
+while responding to intentional semantic edits. We introduce COMPASS, a
+relation-conditioned fine-tuning framework that uses early motion-token
+likelihoods to compute text-token attribution. It combines attribution-weighted
+alignment for preserving pairs, edit-local objectives for altering pairs, and a
+frozen teacher, while retaining the motion tokenizer and generator
+architecture. A local analysis relates the
+forward alignment loss to projected Jacobian energy and derives sufficient
+conditions for risk reduction and token-distribution stability. We evaluate
+preserving rewrites on HumanML3D, Motion-X, and KIT-ML with classifier-free
+guidance fixed to 1.3. After independent native text-encoder adaptation,
+COMPASS variants exceed their parents in mean top-three retrieval (R@3) across
+lexical, syntactic, and narrative rewrites: the margins are 11.89 and 1.97
+percentage points on HumanML3D, and 0.85 and 1.69 points on Motion-X, for the
+T2M-GPT and MotionGPT families. These estimates use one generation seed and
+20 shared random candidate partitions. Separate tests before text adaptation
+show dataset-dependent FID trade-offs; the quality and retrieval columns
+therefore describe distinct configurations. A frozen-text diagnostic finds
+30.3\% lower mean hidden-state cosine displacement, but also shows that the
+detached attribution losses do not directly update the generator. The results
+support checkpoint-specific paraphrase robustness while leaving causal
+attribution and motion-level semantic-edit compliance unresolved.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Text-to-motion generation, prompt robustness, meaning-preserving rewrites,
+motion-conditioned attribution, cross-dataset prompt robustness.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\input{sections/introduction}
+
+\section{Related Work}
+\input{sections/related_work}
+
+\section{Method}
+\input{sections/method}
+
+\section{Experiments}
+\input{sections/experiments}
+\input{sections/experimental_details}
+
+% Let discussion text fill space alongside pending experimental floats.
+\section{Discussion}
+\input{sections/discussion}
+
+\section{Conclusion}
+\input{sections/conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

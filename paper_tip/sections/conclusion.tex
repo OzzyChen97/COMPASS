@@ -1,0 +1,15 @@
+COMPASS formulates prompt robustness through preserving and altering relations
+and uses motion-conditioned attribution to define auxiliary training
+objectives. The evaluations support improved paraphrase retrieval after
+independent text adaptation and dataset-dependent quality gains before that
+stage. Their separation is essential: the source-encoder FID and
+adapted-encoder retrieval columns do not describe one jointly evaluated system.
+
+The local theory identifies conditions under which representation consistency
+can constrain generator sensitivity and output probabilities. Internal
+diagnostics show lower measured sensitivity, while revealing that detached
+attribution losses have no direct generator-update path in the audited
+configuration. The evidence therefore supports checkpoint-specific robustness
+rather than causal attribution control. Establishing the broader selective
+objective will require matched training comparisons, multiple generation and
+training seeds, and direct motion-level evaluation of semantic edits.
